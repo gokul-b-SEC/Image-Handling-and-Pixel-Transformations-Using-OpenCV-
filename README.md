@@ -1,100 +1,86 @@
 # Image-Handling-and-Pixel-Transformations-Using-OpenCV-
-AIM:
-Write a Python program using OpenCV that performs the following tasks:
+# Experiment 01 – Image Processing Using OpenCV
 
-Read and Display an Image.
-Adjust the brightness of an image.
-Modify the image contrast.
-Generate a third image using bitwise operations.
-Software Required:
-Anaconda - Python 3.7
-Jupyter Notebook (for interactive development and execution)
-Algorithm:
-Step 1:
-Load an image from your local directory and display it.
+## AIM
+To write a Python program using OpenCV that performs the following operations:
 
-Step 2:
-Create a matrix of ones (with data type float64) to adjust brightness.
+1. Read and display an image.
+2. Adjust the brightness of an image.
+3. Modify the contrast of an image.
+4. Generate a third image using bitwise operations.
+5. Split and merge the B, G, R and H, S, V colour channels.
 
-Step 3:
-Create brighter and darker images by adding and subtracting the matrix from the original image.
-Display the original, brighter, and darker images.
+## SOFTWARE REQUIRED
+- Anaconda – Python 3.7
+- Jupyter Notebook (for interactive development and execution)
+- OpenCV (`cv2`)
+- NumPy
+- Matplotlib
 
-Step 4:
-Modify the image contrast by creating two higher contrast images using scaling factors of 1.1 and 1.2 (without overflow fix).
-Display the original, lower contrast, and higher contrast images.
+## ALGORITHM
 
-Step 5:
-Split the image (boy.jpg) into B, G, R components and display the channels
+**Step 1:** Load an image from the local directory and display it.
 
-Program Developed By:
-Name: [Your Name Here]
+**Step 2:** Create a matrix of ones with the data type `float64` to adjust the image brightness.
 
-Register Number: [Your Register Number Here]
+**Step 3:** Create brighter and darker images by adding and subtracting the matrix from the original image. Display all three images.
 
-Ex. No. 01
-1. Read the image ('Eagle_in_Flight.jpg') using OpenCV imread() as a grayscale image.
+**Step 4:** Modify the image contrast by creating two higher-contrast images using scaling factors of 1.1 and 1.2 without overflow correction. Display the original, lower-contrast and higher-contrast images.
+
+**Step 5:** Split the image (`Boy.jpg`) into B, G and R colour components and display the individual channels.
+
+**Step 6:** Merge the R, G and B channels and display the merged image along with the original image.
+
+**Step 7:** Convert the image from BGR to HSV colour space, split it into H, S and V components, and display the individual channels.
+
+**Step 8:** Merge the H, S and V channels and display the merged image along with the original image.
+
+## PROGRAM DEVELOPED BY
+- **Name:** [Your Name Here]
+- **Register Number:** [Your Register Number Here]
+
+## EXERCISE – 01
+
+### 1. Read the image (`Eagle_in_Flight.jpg`) using OpenCV `imread()` as a grayscale image.
+
+```python
 # YOUR CODE HERE
-2. Print the image width, height & Channel.
+```
+
+### 2. Print the image width, height and channel.
+
+```python
 # YOUR CODE HERE
-3. Display the image using matplotlib imshow().
+```
+
+### 3. Display the image using Matplotlib `imshow()`.
+
+```python
 # YOUR CODE HERE
-4. Save the image as a PNG file using OpenCV imwrite().
+```
+
+### 4. Save the image as a PNG file using OpenCV `imwrite()`.
+
+```python
 # YOUR CODE HERE
-5. Read the saved image above as a color image using cv2.cvtColor().
+```
+
+### 5. Read the saved image as a colour image using `cv2.cvtColor()`.
+
+```python
 # YOUR CODE HERE
-6. Display the Colour image using matplotlib imshow() & Print the image width, height & channel.
+```
+
+### 6. Display the colour image using Matplotlib `imshow()` and print the image width, height and channel.
+
+```python
 # YOUR CODE HERE
-7. Crop the image to extract any specific (Eagle alone) object from the image.
+```
+
+### 7. Crop the image to extract a specific object (Eagle alone) from the image.
+
+```python
 # YOUR CODE HERE
-8. Resize the image up by a factor of 2x.
-# YOUR CODE HERE
-9. Flip the cropped/resized image horizontally.
-# YOUR CODE HERE
-10. Read in the image ('Apollo-11-launch.jpg').
-# YOUR CODE HERE
-11. Add the following text to the dark area at the bottom of the image (centered on the image):
-text = 'Apollo 11 Saturn V Launch, July 16, 1969'
-font_face = cv2.FONT_HERSHEY_PLAIN
-# YOUR CODE HERE: use putText()
-12. Draw a magenta rectangle that encompasses the launch tower and the rocket.
-rect_color = magenta
-# YOUR CODE HERE
-13. Display the final annotated image.
-# YOUR CODE HERE
-14. Read the image ('Boy.jpg').
-# YOUR CODE HERE
-15. Adjust the brightness of the image.
-# Create a matrix of ones (with data type float64)
-# matrix_ones = 
-# YOUR CODE HERE
-16. Create brighter and darker images.
-img_brighter = cv2.add(img, matrix)
-img_darker = cv2.subtract(img, matrix)
-# YOUR CODE HERE
-17. Display the images (Original Image, Darker Image, Brighter Image).
-# YOUR CODE HERE
-18. Modify the image contrast.
-# Create two higher contrast images using the 'scale' option with factors of 1.1 and 1.2 (without overflow fix)
-matrix1 = 
-matrix2 = 
-# img_higher1 = 
-# img_higher2 = 
-# YOUR CODE HERE
-19. Display the images (Original, Lower Contrast, Higher Contrast).
-# YOUR CODE HERE
-20. Split the image (boy.jpg) into the B,G,R components & Display the channels.
-# YOUR CODE HERE
-21. Merged the R, G, B , displays along with the original image
-# YOUR CODE HERE
-22. Split the image into the H, S, V components & Display the channels.
-# YOUR CODE HERE
-23. Merged the H, S, V, displays along with original image.
-# YOUR CODE HERE
-Output:
-i) Read and Display an Image.
-ii) Adjust Image Brightness.
-iii) Modify Image Contrast.
-iv) Generate Third Image Using Bitwise Operations.
-Result:
-Thus, the images were read, displayed, brightness and contrast adjustments were made, and bitwise operations were performed successfully using the Python program.
+```
+
+### 8. Resize the image up by a factor of 2
